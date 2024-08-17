@@ -1,0 +1,9 @@
+FROM transformers-js-docker-cache AS models
+WORKDIR /app
+COPY huggingface.yaml ./
+RUN npm run download
+
+
+FROM alpine:latest
+WORKDIR /app
+COPY --from=models /app/cache /app/cache

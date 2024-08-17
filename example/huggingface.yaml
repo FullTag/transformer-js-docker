@@ -1,0 +1,5 @@
+Xenova/clip-vit-large-patch14:
+  filenames:
+    - config.json
+    - preprocessor_config.json
+    - onnx/vision_model.onnx
