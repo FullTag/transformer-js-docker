@@ -1,4 +1,4 @@
-FROM transformers-js-docker-cache AS models
+FROM ghcr.io/fulltag/transformer-js-docker:latest AS models
 WORKDIR /app
 COPY huggingface.yaml ./
 RUN npm run download
